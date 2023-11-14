@@ -15,7 +15,7 @@ html {
 }
 body {
     position: relative;
-    background-color: #d2def3;
+    background: linear-gradient(to top, #ffffff, #cbe3f7);
 }
 header {
     top: 0;
@@ -25,10 +25,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 8%;
+    padding: 10px 20px;
     height: 50px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-    background-color: #B0E0E6
+    background-color: #608da2
 }
 header .logo {
     color: #fff;
@@ -41,19 +41,19 @@ header .logo span {
 
 .menu {
     display: flex;
-    background-color: #B0E0E6;
+    background-color: #bedcdfd;
 }
 .menu li {
     list-style: none;
     margin: 0 15px;
-    background-color: #B0E0E6;
+    background-color: #608da2;
 }
 .menu li a {
     font-size: 14px;
     color: #000;
     font-weight: 300;
     transition: 0.2s;
-    background-color: #B0E0E6;
+    background-color: #608da2;
 }
 .menu li a:hover {
     color: #000000;
@@ -71,22 +71,19 @@ header .logo span {
 ::-webkit-scrollbar-thumb{
     background-color: #000;
 }
-
-
-
-.service img {
-   width: 100%;
-   border: 5px solid black;
-   border-radius: 40px;
-   
-}
-
-header button {
+.login_btn {
     background-color: #000000;
     cursor: pointer;
     color: #fff;
     padding: 5px 25px;
-    
+    margin-right: 5px;   
+}
+.signup_btn {
+    background-color: #000000;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 25px; 
+     
 }
 header button:hover {
     background-color: #ffffff;
@@ -159,12 +156,13 @@ header button:hover {
     color: #fff;
     border: 0;
 }
-.form_contact{
-    height: 50%;
+
+.localisation{
+    height: 100%;
 }
 
 footer {
-    background-color: #B0E0E6;
+    background-color: #608da2;
     text-align: center;
     padding: 10px 0;
     color: #000;
@@ -178,6 +176,10 @@ footer {
     width: 100%;
     flex-direction: column;
 }
+.service img {
+    height: calc(15vh + 15vw);
+    width:  calc(15vh + 15vw);
+ }
 .list_services {
     margin: 100px 0;
     display: flex;
@@ -194,27 +196,27 @@ footer {
     justify-content: space-between;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    padding: 20px;
-    margin: 20px;
+    border-radius: 10%;
+    padding: 60px;
+    margin: 60px;
+    background-color: #ffffff;
 }
 .service h3 {
     font-size: 30px;
     margin-bottom: 10px;
 }
-.service p {
-    font-size: 12px;
-}
 .service a {
     margin-top: 10px;
     color: #000000;
-    padding: 5px 20px;
-    border: 1px solid #10075f;
-    font-size: 12px;
+    padding: 10px 50px;
+    border-radius: 20%;
+    border: 1px solid #000000;
+    font-size: 20px;
 }
 .service a:hover {
     margin-top: 10px;
     color: #ffffff;
-    padding: 5px 20px;
+    padding: 10px 50px;
     background: #000;
     font-size: 12px;
 }
@@ -222,7 +224,7 @@ footer {
     text-transform: uppercase;
     position: relative;
     font-size: 25px;
-    color: blue;
+    color: rgb(0, 0, 0);
 }
 .section_title:before {
     position: absolute;
@@ -261,7 +263,7 @@ footer {
   display: grid;
   height: 100%;
   place-items: center;
-  background: #d2def3;
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
