@@ -29,6 +29,8 @@
         </div>
     </header><br><br>
 
+    <a href="#" class="scroll-to-top-button">↑</a>
+
     <section id="services">
         <h1 class="section_title">Nos Destinations</h1>
         <div class="list_services">
@@ -83,4 +85,20 @@
     
 
 </body>
+
+<script>
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        var body = document.body;
+        var scrollTopButton = document.querySelector('.scroll-to-top-button');
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            body.classList.add('scrolled');
+        } else {
+            body.classList.remove('scrolled');
+        }
+    }
+</script>
+
 </html>
