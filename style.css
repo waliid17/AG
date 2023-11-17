@@ -15,7 +15,7 @@ html {
 }
 body {
     position: relative;
-    background: linear-gradient(to top, #ffffff, #cbe3f7);
+    background: linear-gradient(to top, #d0e5f7, #ffffff);
 }
 header {
     top: 0;
@@ -38,7 +38,6 @@ header .logo {
 header .logo span {
     color: #000;
 }
-
 .menu {
     display: flex;
     background-color: #608da2;
@@ -263,7 +262,7 @@ footer {
   display: grid;
   height: 100%;
   place-items: center;
-  background: #ffffff;
+  background: #d0e5f7;
   display: flex;
   justify-content: center;
 }
@@ -332,7 +331,7 @@ body {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #007bff;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     line-height: 50px;
@@ -348,3 +347,77 @@ body {
 body.scrolled .scroll-to-top-button {
     display: block;
 }
+
+#parallax-world-of-ugg .title {
+    padding: 5vh 60px; 
+    margin:0 auto; 
+    text-align:center;
+}
+#parallax-world-of-ugg .title h1 {
+    font-size:35px;
+     letter-spacing:8px;
+}
+
+#parallax-world-of-ugg .parallax-one {
+     padding-bottom: 80px; 
+     overflow: hidden;
+     position: relative;
+     width: 100vw;
+     height: 45vh;
+     background-size: 100% 170% ;
+     align-self: center;
+     background-image: url("./images/omra.png");
+     background-position: center top 60%;
+}
+.omra {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    border: 2px solid #000000;
+    background: transparent;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #000000;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  .myomra{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .omra:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #000000;
+    z-index: -1;
+  }
+  
+  .omra:hover, button:focus {
+    color: white;
+  }
+  
+  .omra:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  .omra:active {
+    transform: scale(0.9);
+  }
