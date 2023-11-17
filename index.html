@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
-    
     <!-- header  -->
     <header>
         <!-- menu responsive -->
         
         <div class="logo">
+            <img src="images/hamana-travel (1).png" alt="">
             <p><span>Hamana</span>-Travel</p>
         </div>
         <ul class="menu">
@@ -27,12 +27,23 @@
         <a href="index2.html"><button class="login_btn"> LOGIN</button></a>
         <a href="index3.html"><button class="signup_btn"> SIGN UP</button></a>
         </div>
-    </header><br><br>
+    </header>
+    <section>
+      <div class="home">
+          <h1>welcome</h1><br><br>
+          <div>
+            <p>Explorez le monde avec Hamana-Travel</p>
+            <h3>Voyagez au-delà des frontières, découvrez l'inexploré.</h3>
+          </div>
+       </div>
+    </section>
+    
+
     <div id="parallax-world-of-ugg">
   
         <section>
           <div class="title">
-            <h1>WELCOME</h1>
+            <h1 class="section_title">Accueil</h1>
           </div>
         </section>
         <section>
@@ -44,6 +55,7 @@
                 </section>
             </div>
         </section><br><br>
+    </div>
 
     <a href="#" class="scroll-to-top-button">↑</a>
 
@@ -107,12 +119,15 @@
     function scrollFunction() {
         var body = document.body;
         var scrollTopButton = document.querySelector('.scroll-to-top-button');
-
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        const header = document.querySelector('header');
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
             body.classList.add('scrolled');
+            header.classList.add('scrolled');
         } else {
             body.classList.remove('scrolled');
+            header.classList.remove('scrolled');
         }
+
     }
 </script>
 
