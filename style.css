@@ -15,7 +15,7 @@ html {
 }
 body {
     position: relative;
-    background: linear-gradient(to top, #d0e5f7, #ffffff);
+    background: white
 }
 header {
     top: 0;
@@ -71,10 +71,12 @@ header .logo span {
 }
 .home img{
     display: block;
-    width: 400px;
-    height: 400px;
-    margin-right: auto;
-    margin-left: auto
+    width: 30vw;
+    height: auto;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /*Scrollbar CSS*/
@@ -278,7 +280,6 @@ footer {
   display: grid;
   height: 100%;
   place-items: center;
-  background: #d0e5f7;
   display: flex;
   justify-content: center;
 }
