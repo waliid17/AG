@@ -43,7 +43,7 @@ header.scrolled{
    background:#608da2 ; 
 }
 .logo img {
-    height: 80px;
+    height: 60px;
     width: auto;
     transition: 0.3s;
 }
@@ -68,6 +68,13 @@ header .logo span {
     background: #fff;
     padding: 6px;
     border-radius: 10px;
+}
+.home img{
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto
 }
 
 /*Scrollbar CSS*/
@@ -432,7 +439,6 @@ body.scrolled .scroll-to-top-button {
   }
 .home {
     padding-top: 100px; 
-    padding-bottom: 770px; 
     overflow: hidden; 
     position: relative; 
     width: 100%; 
@@ -442,7 +448,9 @@ body.scrolled .scroll-to-top-button {
     -moz-background-size: cover; 
     -webkit-background-size: cover;
     background-repeat: no-repeat; 
-    background-position: top center;}
+    background-position: top center;
+    height: 100vh;
+}
 .home h1 {
     font-family:'Oswald', sans-serif; 
     font-size:70px; 
@@ -466,7 +474,7 @@ body.scrolled .scroll-to-top-button {
     opacity:.9;
     position: absolute;
     white-space: nowrap;
-    bottom: 60%;
+    bottom: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -482,7 +490,7 @@ body.scrolled .scroll-to-top-button {
     opacity:.9;
     position: absolute;
     white-space: nowrap;
-    bottom: 50%;
+    bottom: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
