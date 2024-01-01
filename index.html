@@ -38,7 +38,13 @@
           </div>
        </div>
 </section><br><br>
+<div id="pitcho">
+<div id="x-button">
+  <img src="images/x.png" alt="">
+</div>
 
+
+</div>
     <section id="services">
         <h1 class="section_title">Nos Destinations</h1><br><br>
         <section>
@@ -79,7 +85,7 @@
                       </ul>
                     </div>
                     <div class="button-container">
-                      <button>Travel now</button>
+                      <button id="button-pitcho">Travel now</button>
                     </div>
                   </div>
                 </div>
@@ -207,6 +213,18 @@
             </div>
           </section>
     </section><br><br>
+
+    <section id="contact">
+
+      <h1 class="section_title">About us</h1>
+      <div class="about">
+        <div class="about-text">
+        <h1>Explorez tous les tours du monde avec nous.</h1>
+        </div>
+          <img src="images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-100">
+      </div>
+    </section><br><br>      
+      
     <!-- section contact -->
 
     <section id="contact">
@@ -286,5 +304,16 @@
 
     }
 </script>
+<script>
+  document.getElementById('button-pitcho').addEventListener('click', function () {
+         var targetDiv = document.getElementById('pitcho');
+         targetDiv.classList.toggle('Showpitcho');
+     });
+
+     document.getElementById('x-button').addEventListener('click', function () {
+         var targetDiv = document.getElementById('pitcho');
+         targetDiv.classList.toggle('Showpitcho');
+        });
+ </script>
 
 </html>
