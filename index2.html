@@ -12,16 +12,16 @@
     <section>
         <div class="form-box">
           <div class="form-value">
-            <form action="">
+            <form action="login.php" method="post">
               <h2>Login</h2>
               <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
-                <input type="email" required>
+                <input type="email" required name="email">
                 <label for="">Email</label>
               </div>
               <div class="inputbox">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="password" required>
+                <input type="password" required name="password">
                 <label for="">Password</label>
               </div>
               <div class="forget">
@@ -32,7 +32,7 @@
                   <a href="#">Forgot password?</a>
                 </label>
               </div>
-              <button>Log in</button>
+              <input type="submit">
               <div class="register">
                 <p>Don't have a account ? <a href="index3.html">Register</a></p>
               </div>

@@ -718,29 +718,3 @@ section {
     width: 50%;
     height: 100%
   }
-  #pitcho{
-    background-color: #fff;
-    width: 90vw;
-    height: 90vh;
-    position: fixed;
-    top: 8vh;
-    left: 5vw;
-    display: none;
-    z-index: 99999;
-    box-shadow:  0px 0px 1000vh #000000;
-    
-  }
-  #pitcho.Showpitcho{
-    display: block;
-  }
-  #x-button{
-    height: 64px;
-    width: 64px;
-    position: absolute;
-    right: 0;
-  }
-  #x-button img{
-    width: 100%;
-    height: 100%;
-    
-  }
