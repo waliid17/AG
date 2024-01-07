@@ -1,69 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>paris</title>
-    <link rel="stylesheet" href="paris.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>paris</title>
+  <link rel="stylesheet" href="paris.css">
 </head>
+
 <body>
-    
-   
-    <header>
-        <a href="index.html"><button class="button">
-            <div class="button-box">
-              <span class="button-elem">
-                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="button-elem">
-                <svg viewBox="0 0 46 40">
-                  <path
-                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-                  ></path>
-                </svg>
-              </span>
+
+
+  <header>
+    <a href="index.html"><button class="button">
+        <div class="button-box">
+          <span class="button-elem">
+            <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+              </path>
+            </svg>
+          </span>
+          <span class="button-elem">
+            <svg viewBox="0 0 46 40">
+              <path
+                d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+              </path>
+            </svg>
+          </span>
+        </div>
+      </button></a>
+  </header><br><br>
+  <div class="content">
+    <section>
+
+      <div class="container">
+        <div class="row">
+          <!-- 1st product -->
+          <div class="col">
+            <div class="imgContainer">
+              <img src="./images/paris.png" alt="image" />
             </div>
-          </button></a>
-    </header><br><br>
-    <div class="content">
-        <section >
-           
-            <form action="process_reservation.php" method="post">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required>
-    
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="telephone">Téléphone :</label>
-                <input type="tel" id="telephone" name="telephone" required>
-    
-                <label for="hotel">Choisissez l'hôtel :</label>
-                <select id="hotel" name="hotel" required>
-                    <option value="hotel1">Hôtel 1</option>
-                    <option value="hotel2">Hôtel 2</option>
-                    <!-- Ajoutez d'autres options d'hôtel selon vos besoins -->
-                </select>
-    
-                <label for="date">Date d'arrivée :</label>
-                <input type="date" id="date" name="date" required>
-    
-                <label for="commentaire">Commentaires :</label>
-                <textarea id="commentaire" name="commentaire" rows="4"></textarea>
-    
-                <button type="submit">Réserver</button>
-            </form>
-        
+            <div class="title">
+              <h2>Paris</h2>
+              <p>$120.00</p>
+            </div>
+            <div class="para">
+              <p>
+                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
+              </p>
+            </div>
+            <div class="footer2">
+              <div class="star-container">
+                <ul>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+              </div>
 
+              <a href="paris.html"><button>Travel now</button></a>
 
-        </section>
-    </div>
-    <footer>
-        <p>Hamana-Travel Copyright 2023 </p>
-    </footer>
+            </div>
+          </div>
+
+          <!-- 2nd product -->
+          <div class="col">
+            <div class="imgContainer">
+              <img src="./images/bali.png" alt="image" />
+            </div>
+            <div class="title">
+              <h2>Bali</h2>
+              <p>$20.00</p>
+            </div>
+            <div class="para">
+              <p>
+                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
+              </p>
+            </div>
+            <div class="footer2">
+              <div class="star-container">
+                <ul>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="button-container">
+                <button>Travel now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3rd product -->
+          <div class="col">
+            <div class="imgContainer">
+              <img src="./images/england.png" alt="image" />
+            </div>
+            <div class="title">
+              <h2>England</h2>
+              <p>$19.23</p>
+            </div>
+            <div class="para">
+              <p>
+                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
+              </p>
+            </div>
+            <div class="footer2">
+              <div class="star-container">
+                <ul>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="button-container">
+                <button>Travel now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4th product -->
+          <div class="col">
+            <div class="imgContainer">
+              <img src="images/dubai.png">
+            </div>
+            <div class="title">
+              <h2>Dubai</h2>
+              <p>$28.78</p>
+            </div>
+            <div class="para">
+              <p>
+                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
+              </p>
+            </div>
+            <div class="footer2">
+              <div class="star-container">
+                <ul>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star checked"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                  <li>
+                    <i class="fa fa-star"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="button-container">
+                <button>Travel now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>Hamana-Travel Copyright 2023 </p>
+  </footer>
 </body>
+
 </html>
