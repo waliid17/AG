@@ -731,21 +731,6 @@
    margin: 5px 0 20px;
  }
 
- .footer2 .star-container ul {
-   list-style: none;
-   display: flex;
- }
-
- .footer2 .star-container ul li {
-   font-size: 1.6rem;
-   margin: 0 2.5px;
-   color: #ccc;
- }
-
- .footer2 .star-container .checked {
-   color: goldenrod;
- }
-
  button {
    background-color: rgba(0, 0, 0, 0.8);
    outline: none;

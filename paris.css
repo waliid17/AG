@@ -263,7 +263,7 @@ section {
 }
 
 .col .imgContainer {
-  height: 348px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,21 +311,6 @@ section {
   margin: 5px 0 20px;
 }
 
-.footer2 .star-container ul {
-  list-style: none;
-  display: flex;
-}
-
-.footer2 .star-container ul li {
-  font-size: 1.6rem;
-  margin: 0 2.5px;
-  color: #ccc;
-}
-
-.footer2 .star-container .checked {
-  color: goldenrod;
-}
-
 button {
   background-color: rgba(0, 0, 0, 0.8);
   outline: none;
@@ -337,7 +322,96 @@ button {
 }
 
 button:hover {
-  background-color: rgb(32, 145, 60);
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  background-color: #608da2;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bookingFormContainer {
+  max-width: 600px;
+  margin: 20px;
+  padding: 100px;
+  background-color: #f8f9fa;
+  border: 1px solid #608da2;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 4em;
+}
+
+.form-group {
+  margin-bottom: 200px;
+}
+
+.elem-group {
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #608da2;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Optional: Style for inline elements */
+.inlined {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Optional: Additional styling for responsiveness */
+@media (max-width: 500px) {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea,
+  input[type="date"] {
+    width: 100%;
+  }
+}
+
+.Hotel-name {
+  color: #608da2;
+  font-size: 2em;
+  text-align: center;
 }

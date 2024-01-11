@@ -37,166 +37,153 @@
       <div class="container">
         <div class="row">
           <!-- 1st product -->
-          <div class="col">
+          <div class="col travel-section">
             <div class="imgContainer">
-              <img src="./images/paris.png" alt="image" />
-            </div>
-            <div class="title">
-              <h2>Paris</h2>
-              <p>$120.00</p>
-            </div>
-            <div class="para">
-              <p>
-                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-              </p>
+              <img src="./images/walid-hotel.png" alt="image" />
             </div>
             <div class="footer2">
-              <div class="star-container">
-                <ul>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <a href="paris.html"><button>Travel now</button></a>
-
+              <!-- Add an onclick attribute to the button to trigger the scrolling and show the form -->
+              <a href="javascript:void(0);" onclick="scrollToTravelSection('Hotel walid');"><button
+                  class="travel-button">Travel
+                  now</button></a>
             </div>
           </div>
 
           <!-- 2nd product -->
-          <div class="col">
+          <div class="col travel-section">
             <div class="imgContainer">
-              <img src="./images/bali.png" alt="image" />
-            </div>
-            <div class="title">
-              <h2>Bali</h2>
-              <p>$20.00</p>
-            </div>
-            <div class="para">
-              <p>
-                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-              </p>
+              <img src="./images/walid-hotel.png" alt="image" />
             </div>
             <div class="footer2">
-              <div class="star-container">
-                <ul>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="button-container">
-                <button>Travel now</button>
-              </div>
+              <!-- Add an onclick attribute to the button to trigger the scrolling and show the form -->
+              <a href="javascript:void(0);" onclick="scrollToTravelSection('Hotel Abdo');"><button
+                  class="travel-button">Travel
+                  now</button></a>
             </div>
           </div>
 
           <!-- 3rd product -->
-          <div class="col">
+          <div class="col travel-section">
             <div class="imgContainer">
-              <img src="./images/england.png" alt="image" />
-            </div>
-            <div class="title">
-              <h2>England</h2>
-              <p>$19.23</p>
-            </div>
-            <div class="para">
-              <p>
-                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-              </p>
+              <img src="./images/walid-hotel.png" alt="image" />
             </div>
             <div class="footer2">
-              <div class="star-container">
-                <ul>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="button-container">
-                <button>Travel now</button>
-              </div>
+              <!-- Add an onclick attribute to the button to trigger the scrolling and show the form -->
+              <a href="javascript:void(0);" onclick="scrollToTravelSection('Hotel ahmed');"><button
+                  class="travel-button">Travel
+                  now</button></a>
             </div>
           </div>
 
           <!-- 4th product -->
-          <div class="col">
+          <div class="col travel-section">
             <div class="imgContainer">
-              <img src="images/dubai.png">
-            </div>
-            <div class="title">
-              <h2>Dubai</h2>
-              <p>$28.78</p>
-            </div>
-            <div class="para">
-              <p>
-                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-              </p>
+              <img src="./images/walid-hotel.png" alt="image" />
             </div>
             <div class="footer2">
-              <div class="star-container">
-                <ul>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star checked"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                  <li>
-                    <i class="fa fa-star"></i>
-                  </li>
-                </ul>
-              </div>
-              <div class="button-container">
-                <button>Travel now</button>
-              </div>
+              <!-- Add an onclick attribute to the button to trigger the scrolling and show the form -->
+              <a href="javascript:void(0);" onclick="scrollToTravelSection('Hotel chaouki');"><button
+                  class="travel-button">Travel
+                  now</button></a>
             </div>
           </div>
         </div>
       </div>
+      <br><br>
+
+    </section><br><br>
+
+    <section>
+
+      <!-- Your hidden hotel booking form goes here with a unique id -->
+      <div id="bookingFormContainer" style="display: none;">
+        <h1 class="Hotel-name"></h1>
+        <h2>RÉSERVATION</h2>
+        <form id="bookingForm" action="hotel_reservations.php" method="post">
+          <div class="elem-group">
+            <label for="first-name">Prénom</label>
+            <input type="text" id="first-name" name="visitor_first_name" placeholder="John" pattern="[A-Za-z\s]{1,20}"
+              required>
+          </div>
+          <div class="elem-group">
+            <label for="last-name">Nom</label>
+            <input type="text" id="last-name" name="visitor_last_name" placeholder="Doe" pattern="[A-Za-z\s]{1,20}"
+              required>
+          </div>
+          <div class="elem-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+          </div>
+          <div class="elem-group">
+            <label for="phone">Numéro de mobile</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872"
+              pattern="(\d{3})-?\s?(\d{3})-?\s?(\d{4})" required>
+          </div>
+          <div class="elem-group inlined">
+            <label for="checkin-date">Date d'arrivée</label>
+            <input type="date" id="checkin-date" name="checkin" required>
+          </div>
+          <div class="elem-group inlined">
+            <label for="checkout-date">Date de départ</label>
+            <input type="date" id="checkout-date" name="checkout" required>
+          </div><br><br>
+          <div class="elem-group inlined">
+            <label for="adult">Adults</label>
+            <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+          </div>
+          <div class="elem-group inlined">
+            <label for="child">Enfants</label>
+            <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+          </div>
+          <div class="elem-group">
+            <label for="room-selection">Select Room Preference</label>
+            <select id="room-selection" name="room_preference" required>
+              <option value="">Choose a Room from the List</option>
+              <option value="connecting">Connecting</option>
+              <option value="adjoining">Adjoining</option>
+              <option value="adjacent">Adjacent</option>
+            </select>
+          </div>
+          <hr>
+          <button type="submit">Book The Rooms</button>
+        </form>
+      </div>
+
+
+      <!-- JavaScript to handle the scrolling and show the form -->
+      <script>
+        function scrollToTravelSection(inputText) {
+          // Get the parent container by its id
+          var travelSection = document.getElementById('travelSection');
+          // Get the booking form container by its id
+          var bookingFormContainer = document.getElementById('bookingFormContainer');
+
+          // Scroll to the parent container
+          if (travelSection) {
+            travelSection.scrollIntoView({ behavior: 'smooth' });
+          }
+
+          // Remove any old h1 elements with the class "Hotel-name"
+          var oldHeading = bookingFormContainer.querySelector('.Hotel-name');
+          if (oldHeading) {
+            oldHeading.remove();
+          }
+
+          // Create a new h1 element with the class "Hotel-name" and the input text
+          var newHeading = document.createElement('h1');
+          newHeading.className = 'Hotel-name';
+          newHeading.textContent = inputText;
+
+          // Add the new h1 element as the first child of the booking form container
+          if (bookingFormContainer) {
+            bookingFormContainer.style.display = 'block';
+            bookingFormContainer.insertBefore(newHeading, bookingFormContainer.firstChild);
+          }
+
+        }
+      </script>
+
+
     </section>
   </div>
   <footer>

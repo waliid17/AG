@@ -76,25 +76,6 @@
                             </p>
                         </div>
                         <div class="footer2">
-                            <div class="star-container">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
 
                             <a href="paris.html"><button>Travel now</button></a>
 
@@ -116,25 +97,6 @@
                             </p>
                         </div>
                         <div class="footer2">
-                            <div class="star-container">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="button-container">
                                 <button>Travel now</button>
                             </div>
@@ -156,25 +118,6 @@
                             </p>
                         </div>
                         <div class="footer2">
-                            <div class="star-container">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="button-container">
                                 <button>Travel now</button>
                             </div>
@@ -196,25 +139,6 @@
                             </p>
                         </div>
                         <div class="footer2">
-                            <div class="star-container">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star checked"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
                             <div class="button-container">
                                 <button>Travel now</button>
                             </div>
