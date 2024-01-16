@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminCSS.css">
+</head>
+<body>
+  <header class="header">
+    <h1>TRUSTED TRAVEL</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">réservations</a></li>
+        <li><a href="#">Hotels</a></li>
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Tours</a></li>
+      <li><a href="#">Flights</a></li>
+      <li><a href="#">Hotels</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <section class="overview">
+      <h2>Overview</h2>
+      <div class="stats">
+        <div class="stat">
+          <h3>Total Bookings</h3>
+          <p>20</p>
+        </div>
+        <div class="stat">
+          <h3>Total Revenue</h3>
+          <p>200,000DA</p>
+        </div>
+        <div class="stat">
+          <h3>Top Destination</h3>
+          <p>Paris, France</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="recent-bookings">
+      <h2>Recent Bookings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>réservations ID</th>
+            <th>client</th>
+            <th>distination</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>BENDADA PITCHO</td>
+            <td>Paris Tour</td>
+            <td>Jan 1, 2024</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+            <tr>
+              <td>002</td>
+              <td>HALFAOUI WALID</td>
+              <td>NIJER</td>
+              <td>Jan 5, 2024</td>
+            </tr>
+          </tbody>
+
+      </table>
+    </section>
+  </main>
+</body>
+
+<main class="main-content">
+  
+    <section class="manage-content">
+      <h2>Manage Content</h2>
+      <div class="add-hotel">
+        <h3>Add Hotel</h3>
+        <form action="#" method="post">
+          <label for="hotel-name">Hotel Name:</label>
+          <input type="text" id="hotel-name" name="hotel-name" required>
+          <label for="hotel-location">Location:</label>
+          <input type="text" id="hotel-location" name="hotel-location" required>
+          <label for="room-types">Available Room Types (comma separated):</label>
+          <input type="text" id="room-types" name="room-types" required>
+          <label for="available-dates">Available Dates for Reservation (comma separated):</label>
+          <input type="text" id="available-dates" name="available-dates" required>
+          <label for="hotel-features">Hotel Features:</label>
+          <textarea id="hotel-features" name="hotel-features" rows="4" required></textarea>
+          <input type="submit" value="Add Hotel">
+        </form>
+      </div>
+ 
+
+      <div class="manage-flights">
+        <h3>Manage Flights</h3>
+        <form action="#" method="post">
+          <label for="flight-id">Flight ID:</label>
+          <input type="text" id="flight-id" name="flight-id" required>
+          <label for="flight-status">Flight Status:</label>
+          <select id="flight-status" name="flight-status" required>
+            <option value="available">Available</option>
+            <option value="not-available">Not Available</option>
+          </select>
+          <input type="submit" value="Update Flight Status">
+        </form>
+      </div>
+    </section>
+  </main>
+  
+
+</html>
