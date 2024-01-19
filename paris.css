@@ -415,3 +415,79 @@ input[type="submit"]:hover {
   font-size: 2em;
   text-align: center;
 }
+
+#VolFormContainer {
+  position: relative;
+  max-width: 100%;
+  width: 90%;
+  margin: 20px 0;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border: 1px solid #608da2;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.elem-group {
+  margin-bottom: 20px;
+}
+
+.elem-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.elem-group input,
+.elem-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #608da2;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.elem-group.hotel-reservation {
+  display: flex;
+  align-items: center;
+}
+
+.elem-group.hotel-reservation label {
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.elem-group.hotel-reservation input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.elem-group.hotel-reservation:hover {
+  background-color: #f9f9f9;
+}
+
+.elem-group.hotel-reservation input[type="radio"] {
+  display: none;
+}
+
+.elem-group.hotel-reservation input[type="radio"]+label {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.elem-group.hotel-reservation input[type="radio"]:checked+label {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}

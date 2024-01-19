@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamana-Travel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Accueil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
 
@@ -88,7 +88,7 @@
                             <img src="./images/bali.png" alt="image" />
                         </div>
                         <div class="title">
-                            <h2>Bali</h2>
+                            <h2>Barcelone</h2>
                             <p>$20.00</p>
                         </div>
                         <div class="para">
@@ -176,11 +176,12 @@
 
             <div class="form_contact">
                 <h3>Envoyer un message</h3>
-                <form action="#">
-                    <input type="text" placeholder="Nom">
-                    <input type="email" placeholder="Adresse Mail">
-                    <input type="text" placeholder="Objet">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <form action="contact.php" method="post">
+                    <input type="text" name="name" placeholder="Nom">
+                    <input type="email" name="email" placeholder="Adresse Mail">
+                    <input type="text" name="subject" placeholder="Objet">
+                    <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <!-- Submit button -->
                     <input type="submit" value="Envoyer">
                 </form>
             </div>
@@ -220,7 +221,7 @@
     </footer>
 
     <footer>
-        <p>Hamana-Travel Copyright 2023 </p>
+        <p>Trusted-Travel Copyright 2024 </p>
     </footer>
 
 

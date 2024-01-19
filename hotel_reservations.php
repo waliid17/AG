@@ -18,10 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $checkout = $_POST["checkout"];
     $total_adults = $_POST["total_adults"];
     $total_children = $_POST["total_children"];
-    $room_preference = $_POST["room_preference"];
+    $Categorie_de_chambre = $_POST["Categorie_de_chambre"];
+    $Date_of_Birth = $_POST["Date_of_Birth"];
 
     // Insert data into the database
-    $stmt = $connection->prepare("INSERT INTO hotel_reservations (visitor_first_name, visitor_last_name, visitor_email, visitor_phone, checkin, checkout, total_adults, total_children, room_preference) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $connection->prepare("INSERT INTO hotel_reservations (visitor_first_name, visitor_last_name, visitor_email, visitor_phone, checkin, checkout, total_adults, total_children, Categorie_de_chambre,Date_of_Birth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     // Check if the statement is prepared successfully
     if ($stmt === false) {
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bind parameters and execute the statement
-    $stmt->bind_param("ssssssiss", $first_name, $last_name, $email, $phone, $checkin, $checkout, $total_adults, $total_children, $room_preference);
+    $stmt->bind_param("ssssssisss", $first_name, $last_name, $email, $phone, $checkin, $checkout, $total_adults, $total_children, $Categorie_de_chambre, $Date_of_Birth);
 
     if ($stmt->execute()) {
         echo "Reservation successfully submitted!";
