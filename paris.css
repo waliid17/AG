@@ -328,9 +328,9 @@ button:hover {
 }
 
 #bookingFormContainer {
-  max-width: 600px;
   margin: 20px;
-  padding: 100px;
+  padding: 50px;
+  width: 75%;
   background-color: #f8f9fa;
   border: 1px solid #608da2;
   border-radius: 8px;

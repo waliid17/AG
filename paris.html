@@ -84,14 +84,38 @@
           <div class="elem-group hotel-reservation">
             <label>Réserver un hôtel :</label>
             <div class="radio-group">
-              <input type="radio" id="hotel_oui" name="reserver_hotel" value="oui" onclick="afficherhotel()">
-              <label for="hotel_oui" onclick="afficherhotel()">Oui</label>
+              <input type="radio" id="hotel_oui" name="reserver_hotel" value="oui">
+              <label for="hotel_oui">Oui</label>
 
-              <input type="radio" id="hotel_non" name="reserver_hotel" value="non" onclick="nonafficherhotel()">
-              <label for="hotel_non" onclick="nonafficherhotel()">Non</label>
+              <input type="radio" id="hotel_non" name="reserver_hotel" value="non">
+              <label for="hotel_non">Non</label>
             </div>
           </div>
-          <input type="submit" value="Submit">
+          <button type="submit" name="Réserve" value="Réserve" id="reserveBtn" style="display:none;">Réservez</button>
+          <script>
+            function afficherReserve() {
+              document.getElementById('reserveBtn').style.display = 'none';
+              document.getElementById('hotelbtn').style.display = 'block';
+            }
+
+            function nonafficherReserve() {
+              document.getElementById('reserveBtn').style.display = 'inline-block';
+              document.getElementById('hotelbtn').style.display = 'none';
+              nonafficherhotel();
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+              var ouiRadio = document.getElementById('hotel_oui');
+              var nonRadio = document.getElementById('hotel_non');
+
+              ouiRadio.addEventListener('click', afficherReserve);
+              nonRadio.addEventListener('click', nonafficherReserve);
+            });
+          </script>
+          <button name="Réserve" value="Réserve" id="hotelbtn" style="display:none;" onclick="afficherhotel()">Réservez
+            votre
+            hotel</button>
+
 
       </section>
       <section>
@@ -189,7 +213,7 @@
             </select>
           </div>
           <hr>
-          <button type="submit" name="submitButton" value="book">Book The Rooms</button>
+          <button type="submit" name="submitButton" value="book">Réservez</button>
 
         </div>
   </form>
