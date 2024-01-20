@@ -425,18 +425,6 @@
    letter-spacing: 8px;
  }
 
- #parallax-world-of-ugg .parallax-one {
-   padding-bottom: 80px;
-   overflow: hidden;
-   position: relative;
-   width: 100vw;
-   height: 45vh;
-   background-size: 100% 170%;
-   align-self: center;
-   background-image: url("./images/omra.png");
-   background-position: center top 60%;
- }
-
  .omra {
    font-size: 15px;
    letter-spacing: 1px;
@@ -461,36 +449,6 @@
    bottom: 30px;
    left: 50%;
    transform: translateX(-50%);
- }
-
- .omra:before {
-   transition: 0.5s all ease;
-   position: absolute;
-   top: 0;
-   left: 50%;
-   right: 50%;
-   bottom: 0;
-   opacity: 0;
-   content: '';
-   background-color: #000000;
-   z-index: -1;
- }
-
- .omra:hover,
- button:focus {
-   color: white;
- }
-
- .omra:hover:before,
- button:focus:before {
-   transition: 0.5s all ease;
-   left: 0;
-   right: 0;
-   opacity: 1;
- }
-
- .omra:active {
-   transform: scale(0.9);
  }
 
  .home {
@@ -742,7 +700,7 @@
  }
 
  button:hover {
-   background-color: rgb(32, 145, 60);
+   background-color: #608da2;
    border: 1px solid #ccc;
    border-radius: 10px;
  }
@@ -790,4 +748,16 @@
 
  .profile {
    margin-top: 10vh;
+ }
+
+ .parallax-one {
+   padding-bottom: 80px;
+   overflow: hidden;
+   position: relative;
+   width: 100vw;
+   height: 45vh;
+   background-size: 100% 170%;
+   align-self: center;
+   background-image: url("./images/omra.png");
+   background-position: center top 60%;
  }

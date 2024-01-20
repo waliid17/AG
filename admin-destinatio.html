@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International</title>
+    <link rel="stylesheet" href="admin-destination.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+
+        </div>
+    </header><br><br>
+    <div class="content">
+
+
+        <table id="DestinationTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Prix</th>
+                    <th>Image</th>
+                    <th>Action</th> <!-- New column for buttons -->
+                </tr>
+            </thead>
+            <tbody id="DestinationBody">
+                <!-- Les lignes de Destinations peuvent être ajoutées manuellement ici -->
+                <tr>
+                    <td>Destination 1</td>
+                    <td>Description du Destination 1</td>
+                    <td>19.99 $</td>
+                    <td><img src="image1.jpg" alt="Image du Destination 1"></td>
+                    <td>
+                        <button onclick="deleteDestination(this)">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Destination 2</td>
+                    <td>Description du Destination 2</td>
+                    <td>29.99 $</td>
+                    <td><img src="image2.jpg" alt="Image du Destination 2"></td>
+                    <td>
+                        <button onclick="deleteDestination(this)">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form id="Destinations" action="#" method="post" enctype="multipart/form-data">
+            <label for="Destinations">Nom:</label>
+            <input type="text" id="DestinationName" name="DestinationName" required>
+
+            <label for="DestinationDescription">Description:</label>
+            <input type="text" id="DestinationDescription" name="DestinationDescription" required>
+
+            <label for="DestinationPrice">Prix:</label>
+            <input type="text" id="DestinationPrice" name="DestinationPrice" required>
+
+            <label for="DestinationImage">Image:</label>
+            <input type="file" id="DestinationImage" name="DestinationImage" accept="image/*" required>
+
+            <input type="submit" value="Ajouter Destination">
+        </form>
+
+        <script>
+            document.getElementById("Destinations").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+                addDestination();
+            });
+
+            function addDestination() {
+                var DestinationName = document.getElementById("DestinationName").value;
+                var DestinationDescription = document.getElementById("DestinationDescription").value;
+                var DestinationPrice = document.getElementById("DestinationPrice").value;
+                var DestinationImage = document.getElementById("DestinationImage").value;
+
+                var table = document.getElementById("DestinationTable").getElementsByTagName('tbody')[0];
+                var newRow = table.insertRow(table.rows.length);
+
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                var cell5 = newRow.insertCell(4); // New cell for buttons
+
+                cell1.innerHTML = DestinationName;
+                cell2.innerHTML = DestinationDescription;
+                cell3.innerHTML = DestinationPrice;
+                cell4.innerHTML = '<img src="' + DestinationImage + '" alt="Image du destination">';
+                cell5.innerHTML = '<button onclick="deleteDestination(this)">Supprimer</button>';
+            }
+
+            function deleteDestination(button) {
+                var row = button.parentNode.parentNode; // Get the row containing the button
+                row.parentNode.removeChild(row); // Remove the row from the table
+            }
+        </script>
+
+</body>
+
+</html>
+
+</div>
+<footer>
+    <p>Hamana-Travel Copyright 2023 </p>
+</footer>
+</body>
+
+</html>

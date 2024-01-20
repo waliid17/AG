@@ -16,7 +16,7 @@
         <!-- menu responsive -->
 
         <div class="logo">
-            <img src="images/hamana (3).png" alt="">
+            <img src="images/logo.png" alt="">
             <p><span>Trusted</span>-Travel</p>
         </div>
         <ul class="menu">
@@ -40,8 +40,8 @@
                 echo " <a href='user.php'><button class='login_btn'> HI-$firstname</button></a>";
                 echo '<a href="logout.php"><div class="logout"><img src="images/logout.png" alt=""></div></a>';
             } else {
-                echo ' <a href="index2.html"><button class="login_btn"> LOGIN</button></a>
-                <a href="index3.html"><button class="signup_btn"> SIGN UP</button></a>';
+                echo ' <a href="login.html"><button class="login_btn"> LOGIN</button></a>
+                <a href="signup.html"><button class="signup_btn"> SIGN UP</button></a>';
             }
             ?>
         </div>
@@ -49,7 +49,7 @@
     <section>
         <div class="home">
             <h1>welcome to</h1><br><br>
-            <img src="images/hamana (9).png" alt="">
+            <img src="images/trusted-travel.png" alt="">
             <div>
                 <p>Explorez le monde </p>
                 <h3>Voyagez au-delà des frontières, découvrez l'inexploré.</h3>
@@ -61,102 +61,53 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <!-- 1st product -->
-                    <div class="col">
-                        <div class="imgContainer">
-                            <img src="./images/paris.png" alt="image" />
-                        </div>
-                        <div class="title">
-                            <h2>Paris</h2>
-                            <p>$120.00</p>
-                        </div>
-                        <div class="para">
-                            <p>
-                                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-                            </p>
-                        </div>
-                        <div class="footer2">
-
-                            <a href="paris.html"><button>Travel now</button></a>
-
-                        </div>
-                    </div>
-
-                    <!-- 2nd product -->
-                    <div class="col">
-                        <div class="imgContainer">
-                            <img src="./images/bali.png" alt="image" />
-                        </div>
-                        <div class="title">
-                            <h2>Barcelone</h2>
-                            <p>$20.00</p>
-                        </div>
-                        <div class="para">
-                            <p>
-                                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-                            </p>
-                        </div>
-                        <div class="footer2">
-                            <div class="button-container">
-                                <button>Travel now</button>
+                    <?php
+                    $connection = new mysqli("localhost", "root", "", "AG");
+                    $query = "SELECT * FROM `destinations` limit 4";
+                    $result = $connection->query($query);
+                    if ($result->num_rows > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $nom = $row["nom"];
+                            $description = $row["description"];
+                            $image = $row["image"];
+                            $prix = $row["prix"];
+                            $id = $row["id"];
+                            echo "<div class='col'>
+                            <div class='imgContainer'>
+                                <img src='./images/$image' alt='image' />
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- 3rd product -->
-                    <div class="col">
-                        <div class="imgContainer">
-                            <img src="./images/england.png" alt="image" />
-                        </div>
-                        <div class="title">
-                            <h2>England</h2>
-                            <p>$19.23</p>
-                        </div>
-                        <div class="para">
-                            <p>
-                                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-                            </p>
-                        </div>
-                        <div class="footer2">
-                            <div class="button-container">
-                                <button>Travel now</button>
+                            <div class='title'>
+                                <h2>$nom</h2>
+                                <p>$prix DA</p>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- 4th product -->
-                    <div class="col">
-                        <div class="imgContainer">
-                            <img src="images/dubai.png">
-                        </div>
-                        <div class="title">
-                            <h2>Dubai</h2>
-                            <p>$28.78</p>
-                        </div>
-                        <div class="para">
-                            <p>
-                                EXPLOREZ LE MONDE VOYAGEZ AU-DELÀ DES FRONTIÈRES, DÉCOUVREZ L'INEXPLORÉ.
-                            </p>
-                        </div>
-                        <div class="footer2">
-                            <div class="button-container">
-                                <button>Travel now</button>
+                            <div class='para'>
+                                <p>
+                                    $description
+                                </p>
                             </div>
-                        </div>
-                    </div>
+                            <div class='footer2'>
+
+                                <a href='destination.php?nom=$nom'><button>Travel now</button></a>
+
+                            </div>
+                        </div>";
+                        }
+                    }
+                    ?>
                 </div>
+
+
             </div>
         </section>
     </section><br><br>
 
-    <section id="contact">
-
-        <h1 class="section_title">About us</h1>
-        <div class="about">
-            <div class="about-text">
-                <h1>Explorez tous les tours du monde avec nous.</h1>
-            </div>
-            <img src="images/about-banner.png" width="756" height="842" loading="lazy" alt="" class="w-100">
+    <section>
+        <div class="parallax-one">
+            <section>
+                <div class="myomra">
+                    <a href=""><button class="omra">click me</button></a>
+                </div>
+            </section>
         </div>
     </section><br><br>
 
