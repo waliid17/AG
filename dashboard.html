@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted Travel Dashboard</title>
+    <link rel="stylesheet" href="stylead.css">
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Trusted-travel Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="wrapper">
+            <input class="wrapper__burger-checkbox__input" type="checkbox" id="check-menu">
+            <label class="wrapper__burger-checkbox" for="check-menu"><img src="img/menu.png" alt=""></label>
+            <nav class="LSB">
+                <h4 class="LSB__title">Trusted-travel</h4>
+                <div class="LSB__wrapper">
+                    <!-- "Add Destination" link -->
+                    <a href="admin-destination.php" class="LSB__dashboard"
+                        onclick="loadPage('add-destination-page', 'admin-destination.php')">
+                        <svg class="LSB__dashboard__svg" xmlns="http://www.w3.org/2000/svg" height="48"
+                            viewBox="0 0 48 48" width="48">
+                            <!-- Your path data here -->
+                        </svg>
+                        Add Destination
+                    </a>
+                    <!-- "Add Hotels" link -->
+                    <a href="admin-hotels.php" class="LSB__dashboard"
+                        onclick="loadPage('add-hotels-page', 'admin-hotels.php')">
+                        <svg class="LSB__dashboard__svg" xmlns="http://www.w3.org/2000/svg" height="48"
+                            viewBox="0 0 48 48" width="48">
+                            <!-- Your path data here -->
+                        </svg>
+                        Add Hotels
+                    </a>
+                    <!-- Add more links as needed -->
+                    <!-- ... -->
+                </div>
+            </nav>
+            <!-- Content container on the dashboard -->
+            <div class="dashboard-content" id="dashboard-content">
+                <!-- Default content goes here -->
+                <h1>Welcome to the Dashboard</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadPage(pageId, pageUrl) {
+            // Fetch the content from the external HTML file
+            fetch(pageUrl)
+                .then(response => response.text())
+                .then(data => {
+                    // Update the content of the dashboard container
+                    var dashboardContent = document.getElementById('dashboard-content');
+                    if (dashboardContent) {
+                        dashboardContent.innerHTML = data;
+                    }
+                })
+                .catch(error => console.error('Error fetching page:', error));
+        }
+    </script>
+</body>
+
+</html>

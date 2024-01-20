@@ -19,3 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $connection->close();
 }
 ?>
+<?php
+$connection = new mysqli("localhost", "root", "", "AG");
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
+
+$select_query = "SELECT * FROM contact_messages";
+$result = $connection->query($select_query);
+
+if ($result->num_rows > 0) {
+    $messages = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+    $messages = array();
+}
+
+$connection->close();
+?>

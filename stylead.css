@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: "LSB main";
+}
+
+.wrapper__burger-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.wrapper__burger-checkbox img {
+    width: 25px;
+}
+
+.wrapper__burger-checkbox__input {
+    display: none;
+}
+
+.wrapper__burger-checkbox__input:checked~.LSB {
+    display: block;
+}
+
+.LSB {
+    background-color: #f6f6f6;
+    box-shadow: 4px 1px 10px 0px #000000;
+    display: none;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 15px;
+    grid-area: LSB;
+}
+
+.LSB a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #898989;
+    font-size: 15px;
+}
+
+.LSB h4 {
+    margin: 0;
+    padding: 25px;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.LSB__dashboard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    text-decoration: none;
+    color: #898989;
+    font-size: 15px;
+}
+
+.LSB__dashboard__svg {
+    height: 20px;
+}
+
+.LSB__dashboard__active {
+    color: white !important;
+    background-color: #c02056;
+    box-shadow: 4px 1px 10px 0px #000000;
+}
+
+.LSB__dashboard__active svg {
+    fill: white;
+}
+
+.dashboard-content {
+    padding: 20px;
+}
+
+@media (min-width: 800px) {
+    .wrapper {
+        grid-template-columns: 1fr 6fr;
+    }
+}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International</title>
+    <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="admin-destination.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 </head>
@@ -21,6 +22,46 @@ if ($action == "Supprimer") {
     $result = $connection->query($query);
 }
 
+?>
+<?php
+$connection = new mysqli("localhost", "root", "", "AG");
+
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
+$action = isset($_POST['submit']) ? $_POST['submit'] : "pas daction";
+if ($action == "ajouter") {
+    // Check if all required fields are set
+    if (
+        isset($_POST['hotelName'], $_POST['hotelDescription'], $_POST['adultePrice'], $_POST['enfantsPrice'], $_POST['hoteletoiles'], $_FILES['hotelImage'])
+    ) {
+        $nom = $_POST['hotelName'];
+        $Description = $_POST['hotelDescription'];
+        $adultePrice = floatval($_POST['adultePrice']);
+        $enfantsPrice = floatval($_POST['enfantsPrice']);
+        $hoteletoiles = $_POST['hoteletoiles'];
+        $hotelImage = $_FILES['hotelImage'];
+
+        $uploadDirectory = 'images/';
+        $uploadedFileName = $uploadDirectory . basename($hotelImage['name']);
+        $image = basename($hotelImage['name']);
+
+        if (move_uploaded_file($hotelImage['tmp_name'], $uploadedFileName)) {
+            echo "File uploaded successfully!";
+        } else {
+            echo "Error uploading file.";
+        }
+
+        $stmt = $connection->prepare("INSERT INTO hotels (nom, description, prix_adulte, prix_enfants, etoiles,Image) VALUES (?, ?, ?, ?, ?, ?)");
+        if ($stmt === false) {
+            die('Error in SQL query: ' . $connection->error);
+        }
+
+        $stmt->bind_param("ssddis", $nom, $Description, $adultePrice, $enfantsPrice, $hoteletoiles, $image);
+        $stmt->execute();
+        $stmt->close();
+    }
+}
 ?>
 
 <body>
@@ -96,48 +137,9 @@ if ($action == "Supprimer") {
                 ?>
             </tbody>
         </table>
-        <?php
-        $connection = new mysqli("localhost", "root", "", "AG");
 
-        if ($connection->connect_error) {
-            die("Connection failed: " . $connection->connect_error);
-        }
-        $action = isset($_POST['submit']) ? $_POST['submit'] : "pas daction";
-        if ($action == "ajouter") {
-            // Check if all required fields are set
-            if (
-                isset($_POST['hotelName'], $_POST['hotelDescription'], $_POST['adultePrice'], $_POST['enfantsPrice'], $_POST['hoteletoiles'], $_FILES['hotelImage'])
-            ) {
-                $nom = $_POST['hotelName'];
-                $Description = $_POST['hotelDescription'];
-                $adultePrice = floatval($_POST['adultePrice']);
-                $enfantsPrice = floatval($_POST['enfantsPrice']);
-                $hoteletoiles = $_POST['hoteletoiles'];
-                $hotelImage = $_FILES['hotelImage'];
 
-                $uploadDirectory = 'images/';
-                $uploadedFileName = $uploadDirectory . basename($hotelImage['name']);
-                $image = basename($hotelImage['name']);
-
-                if (move_uploaded_file($hotelImage['tmp_name'], $uploadedFileName)) {
-                    echo "File uploaded successfully!";
-                } else {
-                    echo "Error uploading file.";
-                }
-
-                $stmt = $connection->prepare("INSERT INTO hotels (nom, description, prix_adulte, prix_enfants, etoiles,Image) VALUES (?, ?, ?, ?, ?, ?)");
-                if ($stmt === false) {
-                    die('Error in SQL query: ' . $connection->error);
-                }
-
-                $stmt->bind_param("ssddis", $nom, $Description, $adultePrice, $enfantsPrice, $hoteletoiles, $image);
-                $stmt->execute();
-                $stmt->close();
-            }
-        }
-        ?>
-
-        <form id="hotels" action="admin-hotels" method="POST" enctype="multipart/form-data">
+        <form id="hotels" action="admin-hotels.php" method="POST" enctype="multipart/form-data">
             <label for="hotelName">Nom:</label>
             <input type="text" id="hotelName" name="hotelName" required>
 
