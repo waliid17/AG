@@ -24,12 +24,6 @@ if ($action == "Supprimer") {
 ?>
 
 <body>
-    <header>
-        <div class="logo">
-
-        </div>
-    </header><br><br>
-
     <div class="content">
 
         <table id="DestinationTable">
