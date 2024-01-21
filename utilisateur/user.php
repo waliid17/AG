@@ -75,7 +75,7 @@
 			</div>
 			<?php
 			if ($rank == "admin") {
-				echo '<a href="admin.html"><button>Page admin</button></a>';
+				echo '<a href="/ag/admin./admin.html"><button>Page admin</button></a>';
 			}
 			?>
 

@@ -37,11 +37,11 @@
                     $row = mysqli_fetch_assoc($result);
                     $firstname = $row["first-name"];
                 }
-                echo " <a href='user.php'><button class='login_btn'> HI-$firstname</button></a>";
-                echo '<a href="logout.php"><div class="logout"><img src="images/logout.png" alt=""></div></a>';
+                echo " <a href='/ag/utilisateur./user.php'><button class='login_btn'> HI-$firstname</button></a>";
+                echo '<a href="/ag/utilisateur./logout.php"><div class="logout"><img src="images/logout.png" alt=""></div></a>';
             } else {
-                echo ' <a href="login.html"><button class="login_btn"> LOGIN</button></a>
-                <a href="signup.html"><button class="signup_btn"> SIGN UP</button></a>';
+                echo ' <a href="/ag/utilisateur./login.html"><button class="login_btn"> LOGIN</button></a>
+                <a href="/ag/utilisateur./signup.html"><button class="signup_btn"> SIGN UP</button></a>';
             }
             ?>
         </div>

@@ -11,7 +11,7 @@ $result = $connection->query($query);
 if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
     if ($password == $row['password']) {
-        header("Location: index.php");
+        header("Location: /ag/index.php");
         session_start();
 
         $_SESSION['user_id'] = $row['id'];
